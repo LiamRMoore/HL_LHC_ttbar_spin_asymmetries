@@ -23,8 +23,8 @@ set fixed_fac_scale True
 set use_syst False
 # will do CKKW-L/UMEPS merging, so switch off ickkw in run_card to 0 (see e.g. 'Merging in Madgraph 5 and Pythia 8, a brief overview')
 set ickkw 0
-#  loose minimum relative parton kT cut at matrix element level
-set xqcut 5
+#  no minimum relative parton kT cut at matrix element level (MLM only)
+set xqcut 0
 # minimum jet pt to < the UMEPS merging scale (15 GeV) http://home.thep.lu.se/Pythia/pythia82html/UMEPSMerging.html
 set ptj 5
 # exit setting up Cards
