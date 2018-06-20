@@ -1,0 +1,52 @@
+! main89umeps.cmnd
+!
+! @ http://home.thep.lu.se/Pythia/pythia82html/CKKWLMerging.html#Definingthehardprocess
+! We have pre-defined the outgoing particles: e+, e-, ve~, ve, mu+, mu-,
+! vm~, vm, ta+, ta-, vt~, vt (all SM leptons and neutrinos), j~ (container
+! to hold all final state coloured particles), j (container to hold all final
+! state coloured particles), NEUTRINOS (container to hold all final state
+! neutrinos and anti-neutrinos), LEPTONS (container to hold all final state
+! leptons and anti-leptons), BQUARKS (container to hold final state b-quarks),
+! d~, d, u~, u, s~, s, c~, c, b~, b, t~, t (all SM quarks), a, z, w-, w+
+! (all SM electro-weak bosons), h (scalar Higgs boson), W (container to hold
+! both W- and W+ boson), n1 (MSSM neutralino), dl~, dl, ul~, ul, sl~, sl, cl~,
+!  cl, b1~, b1, t1~, t1, dr~, dr, ur~, ur, sr~, sr, cr~, cr, b2~, b2, t2~, t2
+!  (all MSSM squarks). Other outgoing particles are possible if you use the
+! "curly bracket notation" described earlier.
+
+
+! Specify statistics parameters.
+Main:numberOfEvents         = 100000  ! number of events generated
+! Tell Pythia that LHEF input is used
+Beams:frameType             = 4
+
+! Specify merging parameters for CKKW-L, UMEPS, UNLOPS.
+Merging:TMS                 = 15.                  ! merging scale value
+Merging:Process             = pp>LEPTONS,NEUTRINOS,BQUARKS - process definition
+Merging:nJetMax             = 1         ! maximal number of additional LO jets
+TimeShower:pTmaxMatch       = 1
+SpaceShower:pTmaxMatch      = 1
+
+! Set renormalisation / factorisation scales of the 2->2 process
+Merging:muFac               = 91.188
+Merging:muRen               = 91.188
+Merging:muFacInME           = 91.188
+Merging:muRenInME           = 91.188
+
+! Use same PDFs / alpha_s value as in ME calculation (not necessary!)
+PDF:pSet                  = LHAPDF6:CT10 ! LHAPDF5:CT10.LHgrid
+SpaceShower:alphaSvalue   = 0.118
+TimeShower:alphaSvalue    = 0.118
+
+! Do not include rapidity ordering (not necessary!)
+SpaceShower:rapidityOrder = off
+
+! Be more forgiving with momentum mismatches.
+Check:epTolErr               = 2e-2
+
+! Subruns for UMEPS merging.
+LHEFInputs:nSubruns       = 1
+Main:subrun               = 0
+Merging:doUMEPSTree       = on
+Merging:doUMEPSSubt       = off
+Beams:LHEF                = unweighted_events.lhe.gz
