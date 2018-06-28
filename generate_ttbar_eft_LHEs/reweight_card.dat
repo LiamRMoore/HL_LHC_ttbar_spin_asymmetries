@@ -58,32 +58,33 @@ change mode NLO    # Define type of Reweighting. For LO sample this command
 # *** do scan (one-at-a-time)
 #
 # cQq81
+launch --rwgt_name=sm
 launch --rwgt_name=cQq81
-set dim6 52 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 52 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # cQq83
 launch --rwgt_name=cQq83
-set dim6 51 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 51 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # ctu8
 launch --rwgt_name=ctu8
-set dim6 56 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 56 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # ctd8
 launch --rwgt_name=ctd8
-set dim6 57 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 57 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # ctq8
 launch --rwgt_name=ctq8
-set dim6 55 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 55 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # cQu8
 launch --rwgt_name=cQu8
-set dim6 53 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 53 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # cQd8
 launch --rwgt_name=cQd8
-set dim6 54 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 54 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # ctG
 launch --rwgt_name=ctG
-set dim6 16 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 16 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 # ctGI
 launch --rwgt_name=ctGI
-set dim6 17 scan:[-1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+set dim6 17 scan:[-1.0, -0.6666, -0.3333, 0.3333, 0.6666, 1.0]
 
 
 
